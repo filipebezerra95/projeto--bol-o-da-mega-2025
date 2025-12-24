@@ -55,6 +55,8 @@ function checkResults() {
     return;
   }
 
+  window.drawnNumbersGlobal = drawnNumbers;
+
   // confere os jogos
   gameChoice.forEach((game) => {
     const hits = game.numbers.filter((num) => drawnNumbers.includes(num));
@@ -311,11 +313,21 @@ function showGamesTickets() {
     games.forEach((item) => {
       const key = `${item.group}-${item.game}`;
       const destaque = jogosComAcertos.has(key) ? "hit-game" : "";
+      const numbersHTML = item.numbers
+
+        .map((num) => {
+          const hit = 
+          window.drawnNumbersGlobal &&
+          window.drawnNumbersGlobal.includes(num);
+
+          return `<span class="dezena ${hit ? "hit" : ""}">${num}</span>`
+        })
+        .join(" ");
 
       html += `
         <tr class="${destaque}">
           <td>${item.game}</td>
-          <td>${item.numbers.join(" - ")}</td>
+          <td class="numbers">${numbersHTML}</td>
         </tr>
       `;
     });
