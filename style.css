@@ -33,14 +33,16 @@ h2 {
 .caixa-video {
   position: fixed;
   top: 0;
-  z-index: -1;
+  z-index: -2;
 }
 
 video {
-  min-height: 100%;
-  min-width: 100%;
   position: fixed;
-  top: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: -3;
 }
 
 .mascara {
@@ -126,7 +128,7 @@ p {
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .modal {
@@ -199,6 +201,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 2;
 }
 
 span {
