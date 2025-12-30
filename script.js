@@ -1,4 +1,6 @@
+const numberInputs = document.querySelectorAll(".number-inputs input");
 const checkResultsButton = document.querySelector("#checkResultsBtn");
+const stopPartyBtn = document.querySelector("#stopPartyBtn");
 const showPassButton = document.querySelector("#showPassBtn");
 const list = document.querySelector(".ticketGames");
 const sixResults = document.querySelector("#sixResults");
@@ -21,7 +23,30 @@ let musicTimeout = null;
 
 let jogosComAcertos = new Set();
 
-//let myLi = '';
+// auto focus no input inteligente que pula pro proximo
+numberInputs.forEach((input, index) => {
+  input.addEventListener("input", () => {
+    const value = input.value;
+
+    // garante 1–60
+    if (value < 1 || value > 60) {
+      input.value = "";
+      return;
+    }
+
+    // pula pro próximo
+    if (value.length >= 2 && index < numberInputs.length - 1) {
+      numberInputs[index + 1].focus();
+    }
+  });
+
+  // backspace volta
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Backspace" && !input.value && index > 0) {
+      numberInputs[index - 1].focus();
+    }
+  });
+});
 
 function checkResults() {
   jogosComAcertos.clear();
@@ -85,6 +110,7 @@ function checkResults() {
         startMoneyRain();
         playChampionMusic();
         // parar o show
+        showStopButton();
         if (!partyActive) {
           partyActive = true;
           playChampionMusic();
@@ -284,6 +310,16 @@ function stopCelebration() {
   stopMoneyRain();
   stopFireWorks();
 }
+
+// função para parar comemoração
+function showStopButton() {
+  stopPartyBtn.style.display = "block";
+}
+
+stopPartyBtn.addEventListener("click", () => {
+  stopCelebration();
+  location.reload();
+});
 
 // função para mostrar os jogos que foram feitos
 

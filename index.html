@@ -31,6 +31,7 @@
     <header>
       <h1>Bolão Tenda Atacado & Amigos-2025</h1>
       <h2>Sistema de conferencia de Jogos</h2>
+      <h2>Premio estimado: 1 BILHÃO DE REAIS</h2>
     </header>
     <div class="caixa-video">
       <video src="./assets/amigos-de sucesso.mp4" autoplay muted loop></video>
@@ -38,7 +39,9 @@
     </div>
     <main>
       <section class="input-section">
-        <h3>Insira os números sorteados:</h3>
+        <h3>Insira os números sorteados:</h3><button id="stopPartyBtn" class="stop-party-btn" style="display: none">
+          🛑 Parar a festa e recarregar
+        </button>
         <div class="number-inputs">
           <input type="number" id="num1" min="1" max="60" placeholder="Nº1" />
           <input type="number" id="num2" min="1" max="60" placeholder="Nº2" />
@@ -48,6 +51,7 @@
           <input type="number" id="num6" min="1" max="60" placeholder="Nº6" />
         </div>
         <button id="checkResultsBtn">Conferir Resultados</button>
+        
       </section>
 
       <section class="results-section glass-card">

@@ -70,13 +70,31 @@ const gameChoice = [
     {group: 'group4', game: 'b4', numbers: [4, 8, 11, 13, 31, 56]},
     {group: 'group4', game: 'c4', numbers: [3, 5, 11, 18, 33, 47]},
 
-     //----------------- GROUP 4 -----------------//
+     //----------------- GROUP 5 -----------------//
 
     {group: 'group5', game: 'A1', numbers: [15, 18, 33, 38, 54, 58]},
     {group: 'group5', game: 'b1', numbers: [24, 28, 35, 40, 47, 59]},
     {group: 'group5', game: 'c1', numbers: [7, 22, 36, 38, 42, 56]},
 
     {group: 'group5', game: 'A2', numbers: [3, 22, 23, 36, 44, 55]},
+
+    //----------------- GROUP 6 -----------------//
+
+    {group: 'group6', game: 'A1', numbers: [6, 19, 31, 37, 41, 42]},
+    {group: 'group6', game: 'b1', numbers: [1, 17, 19, 29, 50, 57]},
+    {group: 'group6', game: 'c1', numbers: [1, 12, 19, 22, 42, 56]},
+
+    {group: 'group6', game: 'A2', numbers: [8, 12, 17, 31, 45, 58]},
+    {group: 'group6', game: 'b2', numbers: [7, 25, 28, 32, 39, 47]},
+    {group: 'group6', game: 'c2', numbers: [11, 16, 27, 29, 32, 44]},
+
+    {group: 'group6', game: 'A3', numbers: [6, 12, 23, 34, 47, 58]},
+    {group: 'group6', game: 'b3', numbers: [5, 18, 21, 37, 53, 58]},
+    
+
+    {group: 'group6', game: 'A4', numbers: [7, 14, 19, 29, 45, 56]},
+    {group: 'group6', game: 'b4', numbers: [3, 7, 23, 29, 35, 47]},
+    
 
         
 ]
