@@ -94,6 +94,11 @@ const gameChoice = [
 
     {group: 'group6', game: 'A4', numbers: [7, 14, 19, 29, 45, 56]},
     {group: 'group6', game: 'b4', numbers: [3, 7, 23, 29, 35, 47]},
+
+    //----------------- GROUP 7 -----------------//
+
+    {group: 'group7', game: 'A1', numbers: [7, 8, 10, 11, 15, 29]},
+    {group: 'group7', game: 'b1', numbers: [2, 8, 13, 24, 49, 52]},
     
 
         
